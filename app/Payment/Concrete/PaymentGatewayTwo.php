@@ -29,7 +29,7 @@ class PaymentGatewayTwo implements PaymentGatewayInterface
     public function __construct(
         private readonly int              $appId,
         private readonly string           $appKey,
-        private readonly PaymentRepositoryInterface $paymentRepository
+        private readonly ?PaymentRepositoryInterface $paymentRepository = null
     ){}
 
     public function getMerchantId(): int

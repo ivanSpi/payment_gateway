@@ -34,7 +34,7 @@ class PaymentGatewayOne implements PaymentGatewayInterface
     public function __construct(
         private readonly int              $merchantId,
         private readonly string           $merchantKey,
-        private readonly PaymentRepositoryInterface $paymentRepository
+        private readonly ?PaymentRepositoryInterface $paymentRepository = null
     ){}
 
     public function getMerchantId(): int
